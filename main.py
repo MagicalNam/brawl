@@ -125,8 +125,8 @@ voters = [
       "bad_lines" : [
         "Boooooo!!!!!!!!!!!!!!!!!!!!!1",
         "BOOOO!!!!!!!!!!!!!!!!!!",
-        "",
-        "",
+        "Booo!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
+        "bOOOOOOOOO!!!!!!!!!!!!!!!!!!!!!!",
       ],
   },
   {
@@ -135,9 +135,24 @@ voters = [
       "convinced_player_1" : 0,
       "convinced_player_2" : 0,
       "important_topics" : [],
-      "good_lines" : [],
-      "neutral_lines" : [],
-      "bad_lines" : [],
+      "good_lines" : [
+        "God loves you!",
+        "JESUS",
+        "Clap clap clap clap clap clap clap!!!!11",
+        "  CLAP CLAP CLAP CLAP CLAP CLP CLAP CLAP!!!!!",
+      ],
+      "neutral_lines" : [
+        "------------",
+        "----",
+        "------ ---------- --------",
+        "*ZZZzzzZZZZzzzzzz*",        
+      ],
+      "bad_lines" : [
+        "They are SATAN",
+        "THE RAPTURE IS COMMING",
+        "BOOOOOO!!!!!!!!!",
+        "How could you!?",
+      ],
   },
   {
       "name": "Moderate",
@@ -145,9 +160,24 @@ voters = [
       "convinced_player_1" : 0,
       "convinced_player_2" : 0,
       "important_topics" : [],
-      "good_lines" : [],
-      "neutral_lines" : [],
-      "bad_lines" : [],
+      "good_lines" : [
+        "WOOOOOOOOOOOOOOOOOOO!!!!!!!!!!!!",
+        "WWOOOOOOOOO!!!!!",
+        "YAAAAAAAAAAAAAAA!!!!!",
+        "WOOOO!!! WOOOOOOOOOO!!!!!",
+      ],
+      "neutral_lines" : [
+        "This is so borring",
+        "*GASP*....",
+        "*YAWN*.......",
+        "-------------------------------------------",
+      ],
+      "bad_lines" : [
+        "This is outrageous!",
+        "BOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO!!!!!!!",
+        "BOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO!!!!!!!!!!!!!",
+        "BOOOOOOOOOOOOOOOOOOO!!! BOOOOOOOOOOOO!!!!!!!",
+      ],
   },
   {
       "name": "Republican",
@@ -155,9 +185,24 @@ voters = [
       "convinced_player_1" : 0,
       "convinced_player_2" : 0,
       "important_topics" : [],
-      "good_lines" : [],
-      "neutral_lines" : [],
-      "bad_lines" : [],
+      "good_lines" : [
+        "WOOOOOOOOOOOOOOOOOOOOO",
+        "CLAPCLAPCLAPCLAPCLAPCLAPCLAPCLAPCLAPCLAPCLAPCLAP",
+        "CLAPCLAPCLAPCLAPCLAPCLAPCLAPCLAP",
+        "CLAPCLAPCLAPCLAPCLAPCLAPCLAPCLAPCLAPCLAPCLAP",
+      ],
+      "neutral_lines" : [
+        "BORRING!!!!",
+        "BORRING!!",
+        ".....",
+        "....",
+      ],
+      "bad_lines" : [
+        "BOOOOO BOOO BOOOOOOO",
+        "BOOOO!!! BOOOOOOO!!!! BOOOOOOOOOO!! BOOOOOOOOO!!!",
+        " BOOOOOOOOOOO",
+        "Boooooo!!! Booooooooooooo!!!!",
+      ],
   },
 ]
 
@@ -406,18 +451,39 @@ while True:
         if voters[i]["convinced_player_2"] > 100:
           voters[i]["convinced_player_2"] = 100
 
+    response_lines = []
+    response_lines_destilled = []
+    for i, voter_persons in enumerate(voters):
+      if arguments[argument]["persuation"][i] >= 2.5:
+        response_lines.append(voters[i]["good_lines"])
+      if arguments[argument]["persuation"][i] < 2.5 and arguments[argument]["persuation"][i] >= -0.5:
+        response_lines.append(voters[i]["neutral_lines"])
+      if arguments[argument]["persuation"][i] < -0.5:
+        response_lines.append(voters[i]["bad_lines"])
 
-
-
-
-
-
+    for line in response_lines:
+      for element in line:
+        response_lines_destilled.append(element)
+    random.shuffle(response_lines_destilled)
+    time_sleeper = 0.1
+    counter = 0
+    for i in response_lines_destilled:
+      counter += 1
+      if counter <= 4:
+        time_sleeper = time_sleeper * 0.38
+      if counter >= 8 and counter <= 24:
+        time_sleeper = time_sleeper*1.16
+      if counter >= 25 and counter <= 28:
+        time_sleeper = 0.09
+      if counter >= 33:
+        break
+      print(i)
+      time.sleep(time_sleeper)
 
     oppinion = 0
     for i, constituent in enumerate(audiences[audience]["constituents"]):
       #print("))", i)
       oppinion += (audiences[audience]["constituents"][i])*(voters[i]["convinced_player_1"]-voters[i]["convinced_player_2"])
-      #print("##",audiences[audience]["constituents"][i], voters[i]["convinced_player_1"], voters[i]["convinced_player_2"])
     if oppinion > 0:
       print(speakers[player_1]["name"], "is winning")
       print("+",abs(oppinion/8),"points\n")
