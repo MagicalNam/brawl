@@ -250,7 +250,7 @@ speakers = [
   },
   {
     "name": "Donald Trump",
-    "arguments": [2, 5, 10, 11, 12],
+    "arguments": [2, 5, 10, 11, 12, 13, 15],
     "opponent_arguments": [],
     "rallys": [],
     "power1": "Corruption",
@@ -262,7 +262,7 @@ speakers = [
       "THEY ARE THE WORST PEOPLE. THE WORST PEOPLE IN THE ENTIRE WORLD",
     ],
   },
-{
+  {
     "name": "Zorahn Mambdani",
     "arguments": [1, 3, 7, 8],
     "opponent_arguments": [],
@@ -276,9 +276,9 @@ speakers = [
       "WE will fix it.",
     ],
   },
-{
+  {
     "name": "Elon Musk",
-    "arguments": [2, 5, 6],
+    "arguments": [2, 5, 6, 14, 15],
     "opponent_arguments": [],
     "rallys": [],
     "power1": "Buy it",
@@ -289,8 +289,69 @@ speakers = [
       "...",
       "Everyone else is no much stupider.",
     ],
-  }    
+  },
+  {
+    "name": "Ursula von der Leyen",
+    "arguments": [0, 1, 4, 7, 9],
+    "opponent_arguments": [],
+    "rallys": [],
+    "power1": "I call Bulshit",
+    "power2": "The Facts says No",
+    "lines": [
+      "Take the POWER BACK TO THE PEOPLE",
+      "We NEED to FIX this!!!",
+      "For the people of our country. We need to do this. We need to fix it NOW!",
+      "They are keeping your future away from you. The rich are AWFULL",
+    ],
+  },
+  {
+    "name": "Charlie Kirk",
+    "arguments": [2, 5, 10, 11, 12, 13, 15],
+    "opponent_arguments": [],
+    "rallys": [],
+    "power1": "Corruption",
+    "power2": "Make America Great Again",
+    "lines": [
+      "MAKE AMERICA GREAT AGAIN",
+      "They are awfull scum. Very bad people indeed",
+      "I AM THE ONLY ONE WHO CAN FIX THIS",
+      "THEY ARE THE WORST PEOPLE. THE WORST PEOPLE IN THE ENTIRE WORLD",
+    ],
+    },
+  {
+    "name": "Emanuel Macron",
+    "arguments": [1, 3, 7, 8],
+    "opponent_arguments": [],
+    "rallys": [],
+    "power1": "Big D#ck Energy",
+    "power2": "Fill the holes",
+    "lines": [
+      "FOR ORDINARY PEOPLE",
+      "Because we actually care about YOU",
+      "You do NOT stand alone in this, we will fix this.",
+      "WE will fix it.",
+    ],
+  },
+  {
+    "name": "Vladimir Putin",
+    "arguments": [2, 5, 6, 14, 15],
+    "opponent_arguments": [],
+    "rallys": [],
+    "power1": "Buy it",
+    "power2": "Shadowbann",
+    "lines": [
+      "Uh,",
+      "This is, like this is probably the end of humanity.",
+      "...",
+      "Everyone else is no much stupider.",
+    ],
+  },      
+#######################################################################################################
+#######################################################################################################
 ]
+
+
+
 
 arguments = [
   #0
@@ -468,7 +529,7 @@ arguments = [
     },
     #11
   { 
-    "name":"Decrease the sales tax",
+    "name":"Remove the sales tax",
       "persuasion":[5.2, -5.4, -4.2, 1.1, 2.8, 3.1, 4.2, 5.1],
       "topics":["Policy"],
       "speech":[
@@ -481,7 +542,7 @@ arguments = [
       ],
     },
     #12
-    { 
+  { 
     "name":"Our kids - Our education",
       "persuasion":[-4.3, -8.2, -7.1, -6.2, 9.1, -1.3, 3.2, 7.3,],
       "topics":["Policy"],
@@ -495,50 +556,51 @@ arguments = [
         "Protect DEMOCRACY!!!! protect FREEDOM!!!!!",
       ],
     },
+    #13
   { 
-    "name":"Everything is GREAT",
-      "persuasion":[0.0, -3.8, -7.5, 2.9, 2.1, 3.4, 3.7, 5.5],
+    "name":"Our military needs money",
+      "persuasion":[-6.6, -4.8, -5.6, 4.1, 2.2, 4.4, 6.8, 9.9],
       "topics":["Moral boost"],
       "speech":[
-        "Everything is so fantastic",
-        "All the lines are going UPP!!!.",
-        "Think about the shareholders",
-        "The investors LOVE it",
-        "AI!!!!!",
-        "All the mergersand IPOs!! It's GREAT!!!!",
-        "CAPITALISM",
-        "We are riseing at a beautifull 2 precent EVERY single year!",
+        "WE ARE NOT SAFE!!!!!",
+        "THEY ARE COMMING FOR US!!",
+        "THE TERRORISTS ARE COMMING FOR YOU!!!!!!!",
+        "Think about the poor poor military contractors.",
+        "We need DEFENCE!",
+        "War is actually not that bad when you think about it",
+        "TO PROTECT DEMOCRACY!!!!!!!!!!!!!!!!!!",
+        "What about the shareholders?!",
       ],
     },
+    #14
   { 
-    "name":"Cancel the foregin aid",
+    "name":"Electric cars will save the world",
       "persuasion":[-5.2, -1.9, -4.1, -4.9, 2.4, -1.5, 7.9, 6.2],
       "topics":["Homophobia"],
       "speech":[
-        "The money must stay here",
-        "What about OUR people",
-        "The money will go to YOu!!!",
-        "They have other cultures!",
-        "How do you benefit from it?!",
-        "What do we GAIN???",
-        "THEY",
-        "They are terrorists and infidells.",
-        "Why would we benefit from caring about others?!",
-        "It's their Problem.",
+        "Oil is bad",
+        "We need to like stop climate change.",
+        "The new cars are the FUTURE!!!",
+        "Elecrtic is Modern",
+        "They will be faster, the electric cars will solve trafic!!",
+        "The plants love lithium you know.",
+        "They are quiet..",
       ],
     },
+    #15
   { 
-    "name":"Stop the wars",
-      "":[4.1, 3.0, 6.2, 4.1, -4.7, 2.1, 4.1, -1.0],
-      "topics":["Policy"],
+    "name":"The Gays",
+      "persuasion":[-4.1, -3.8, -18.3, -4.1, -4.7, 2.1, 4.1, 9.8],
+      "topics":["Homophobia"],
       "speech":[
-        "PEACE",
-        "YOU WILL DIE",
-        "THINK ABOUT THE CHILDREN!!",
-        "HAVE A HEART",
-        "THE SUFFERING",
-        "THE ENDLESS TORTURE. THINK OF ALL INOCENT CIVILIANS",
-        "THE INFINATE DEATH MUST STOP",
+        "THOSE DISGUSTING RAINBOWS",
+        "THEY WILL TURN YOUR KIDS GAY",
+        "THIS IS A CONSPIRACY",
+        "WE CAN'T LET THIS HAPPEN",
+        "DO YOU WANT TO BE GAY?!",
+        "THWY ARE GROOMING OUR CHILDREN",
+        "I mean, they have a great sence of fassion, Butt, THEY ARE GAY!!!",
+        "Yes I did do that to, butt i said no homo",
       ],
     },
   ]
